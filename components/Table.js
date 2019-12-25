@@ -34,6 +34,16 @@ class Table extends React.Component {
         </tr>
       )
     }
+    else if (which === "policies") {
+      return (
+        <tr>
+          <th>IP Range</th>
+          <th>Description</th>
+          <th>Action</th>
+          <th></th>
+        </tr>
+      )
+    }
   }
   renderTableBody = () => {
     const { data, which } = this.props
@@ -49,6 +59,21 @@ class Table extends React.Component {
                <td>{roles.join(', ')}</td>
                <td className="tfa center" >{two_factor ? '✓' : ''}</td>
                <td>{status}</td>
+               <td className="delete center">×</td>
+            </tr>
+         )
+      })
+    }
+
+    else if (which === "policies") {
+      return data.map((policy) => {
+        const { id, ip_range, description, action } = policy
+
+        return (
+            <tr key={id}>
+               <td>{ip_range}</td>
+               <td>{description}</td>
+               <td>{action}</td>
                <td className="delete center">×</td>
             </tr>
          )
