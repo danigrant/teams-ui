@@ -1,39 +1,43 @@
-const InputTextForm = ({ placeholder }) => (
-  <div className="input-group-wrapper">
-    <input type="text" placeholder={placeholder} />
+const Search = ({ prompt }) => (
+  <div className="search-wrapper">
     <div className="input-append">
-      <span className="input-append-text">@example.com</span>
+      <span className="input-append-text">{prompt}</span>
     </div>
-    <div className="button">Submit</div>
+    <input type="text" placeholder={`Search ${prompt}...`} />
+    <div className="button">Search</div>
     <style jsx>{`
-      .input-group-wrapper {
+      .search-wrapper {
         width: 100%;
         display: flex;
         align-items: stretch;
+        margin-bottom: 20px;
       }
       input {
+        border: none;
+        font-size: 1rem;
+        outline: none;
+        color: #495057;
+        width: 100%;
+        box-sizing: border-box;
         border-radius: 0.25rem;
         padding: 0.2rem 1rem;
-        font-size: 1rem;
         background-color: #fff;
         border: 1px solid #ced4da;
-        border-radius: .25rem;
-        outline: none;
-        flex: 1 1 auto;
-        width: 1%;
-        margin-bottom: 0;
-        color: #495057;
       }
       .input-append {
         background-color: #e9ecef;
         border-radius: 5px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         border: 1px solid #ced4da;
-        margin-left: -3px;
+        margin-right: -2px;
+        z-index: 1;
         padding: 0.2rem 1rem;
         text-align: center;
         line-height: 2;
+      }
+      .input-append-text {
+        text-transform: capitalize;
       }
       .button {
         background-color: #0275D8;
@@ -59,4 +63,4 @@ const InputTextForm = ({ placeholder }) => (
   </div>
 )
 
-export default InputTextForm
+export default Search

@@ -1,6 +1,6 @@
 import Card from '../components/Card'
 import InputTextForm from '../components/InputTextForm'
-import Table from '../components/Table'
+import TableWithSearch from '../components/TableWithSearch'
 
 class Index extends React.Component {
   state = { members: [
@@ -14,7 +14,7 @@ class Index extends React.Component {
           <InputTextForm placeholder="email" />
         </Card>
         <Card header="Members" description="The who's who of your A-list team">
-          <Table which="members" data={this.state.members} />
+          <TableWithSearch which="members" data={this.state.members} />
         </Card>
         <style jsx>{`
 
