@@ -2,7 +2,7 @@ const InputTextForm = ({ placeholder }) => (
   <div className="input-group-wrapper">
     <input type="text" placeholder={placeholder} />
     <div className="input-append">
-      <span class="input-group-append-text">@example.com</span>
+      <span className="input-group-append-text">@example.com</span>
     </div>
     <div className="button">Submit</div>
     <style jsx>{`
