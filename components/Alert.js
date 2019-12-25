@@ -24,7 +24,7 @@ const Alert = ({ message, type }) => (
       }
       .alert-message {
         width: 75%;
-        line-height: 2;
+        line-height: 2.5;
       }
       .alert-action-buttons {
         display: flex;
