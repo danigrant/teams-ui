@@ -1,7 +1,8 @@
-const Card = ({ header, children }) => (
+const Card = ({ header, description, children }) => (
   <div className="card-wrapper">
     <div className="card-header">
-      <h1>{header}</h1>
+      <h1>{ header }</h1>
+      <h2>{ description }</h2>
     </div>
     <div className="card-content-wrapper">
       { children }
@@ -9,26 +10,40 @@ const Card = ({ header, children }) => (
     <style jsx>{`
       .card-wrapper {
         font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-        border: 1px solid rgba(0,0,0,.125);
+        box-shadow: 0px 0px 15px rgba(120, 120, 120, 0.1);
         border-radius: 5px;
         background-color: #fff;
         width: 95%;
         max-width: 840px;
         margin: 0 auto;
+        box-sizing: border-box;
+        padding: 50px 45px;
       }
       .card-header {
         border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
-        padding: .75rem 1.25rem;
+        margin-top: 0;
         margin-bottom: 0;
-        background-color: rgba(0,0,0,.03);
-        border-bottom: 1px solid rgba(0,0,0,.125);
+      }
+      .card-header h1, .card-header h2 {
+        font-size: 24px;
+        font-weight: 450;
       }
       .card-header h1 {
-        font-size: 1rem;
-        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      .card-header h2 {
+        margin-top: 0;
+        color: #999999;
       }
       .card-content-wrapper {
-        padding: .75rem 1.25rem;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    `}</style>
+    <style global>{`
+      .card-wrapper {
+        color: #495057;
       }
     `}</style>
   </div>

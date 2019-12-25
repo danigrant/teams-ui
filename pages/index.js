@@ -1,23 +1,18 @@
 import Card from '../components/Card'
+import InputTextForm from '../components/InputTextForm'
 
 const Index = () => (
   <div>
-    <Card header="Invite Members To Join Your Team">
-      <p>Members will be invited to join <span className="bold">team123</span> <span className="action-text">Change name</span></p>
+    <Card header="Card Name" description="The short description of what this card does goes here">
+      <InputTextForm placeholder="email" />
     </Card>
     <style jsx>{`
-      .bold {
-        font-weight: bold;
-      }
-      .action-text {
-        color: #2A7DF7;
-        margin-left: 15px;
-      }
-      .action-text:hover {
-        filter: brightness(90%);
-      }
-      .action-text:active {
-        filter: brightness(80%);
+
+    `}</style>
+    <style global>{`
+      body {
+        background-color: #F2F2F2;
+        color: #495057;
       }
     `}</style>
   </div>
