@@ -16,6 +16,8 @@ const Card = ({ header, description, children }) => (
         width: 95%;
         max-width: 840px;
         margin: 0 auto;
+        margin-top: 35px;
+        margin-bottom: 35px;
         box-sizing: border-box;
         padding: 50px 45px;
       }

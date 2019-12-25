@@ -10,8 +10,10 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <Card header="Card Name" description="The short description of what this card does goes here">
+        <Card header="Invite Members" description="Invite someone special to join your team">
           <InputTextForm placeholder="email" />
+        </Card>
+        <Card header="Members" description="The who's who of your A-list team">
           <Table which="members" data={this.state.members} />
         </Card>
         <style jsx>{`

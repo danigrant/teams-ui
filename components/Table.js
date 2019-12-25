@@ -30,6 +30,7 @@ class Table extends React.Component {
           <th>Roles</th>
           <th>2FA</th>
           <th>Status</th>
+          <th></th>
         </tr>
       )
     }
@@ -46,8 +47,9 @@ class Table extends React.Component {
             <tr key={id}>
                <td>{email}</td>
                <td>{roles.join(', ')}</td>
-               <td>{two_factor ? '✓' : ''}</td>
+               <td className="tfa" >{two_factor ? '✓' : ''}</td>
                <td>{status}</td>
+               <td>×</td>
             </tr>
          )
       })
@@ -58,7 +60,6 @@ class Table extends React.Component {
     return (
       <div>
         <table>
-          {}
           <thead>
             { this.renderTableHead() }
           </thead>
@@ -66,6 +67,36 @@ class Table extends React.Component {
               { this.renderTableBody() }
            </tbody>
         </table>
+        <style jsx global>{`
+          table {
+            border-collapse: collapse;
+            border-spacing: 2px;
+            text-align: left;
+            font-size: 12px;
+            width: 100%;
+          }
+          thead tr {
+            font-weight: bold;
+          }
+          tr:nth-child(even) {
+            background: #f3f3f3;
+          }
+          tbody {
+            display: table-row-group;
+            vertical-align: middle;
+          }
+          tr {
+            height: 35px;
+            border-bottom: 1px solid #ccc;
+          }
+          th, td {
+            padding: .75rem 0.25rem;
+          }
+          td .tfa {
+            text-align: center !important;
+            color: #8bc34a !important;
+          }
+        `}</style>
       </div>
     )
   }
