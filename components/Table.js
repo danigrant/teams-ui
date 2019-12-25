@@ -95,13 +95,8 @@ class Table extends React.Component {
           .tfa {
             color: #8bc34a !important;
           }
-          .delete {
-            -webkit-transition: -webkit-transform 8s ease;
-            transition: transform 8s ease;
-          }
           .delete:hover {
-            -webkit-transform: rotate(-200deg);
-            transform: rotate(-200deg);
+            filter: brightness(97%);
           }
           .delete:active {
             filter: brightness(95%);
