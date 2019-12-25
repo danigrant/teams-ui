@@ -40,11 +40,12 @@ const Card = ({ header, description, children }) => (
         padding-top: 15px;
         padding-bottom: 15px;
       }
-    `}</style>
-    <style global>{`
       .card-wrapper {
         color: #495057;
       }
+    `}</style>
+    <style jsx global>{`
+
     `}</style>
   </div>
 
