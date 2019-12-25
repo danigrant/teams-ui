@@ -19,14 +19,53 @@
 */
 
 class Table extends React.Component {
-  renderTableData = props => {
-    const { columns } = props
+  renderTableHead = () => {
+    const { data, which } = this.props
+
+    // if members table, render it one way
+    if (which === "members") {
+      return (
+        <tr>
+          <th>Member</th>
+          <th>Roles</th>
+          <th>2FA</th>
+          <th>Status</th>
+        </tr>
+      )
+    }
+  }
+  renderTableBody = () => {
+    const { data, which } = this.props
+
+    // if members table, render it one way
+    if (which === "members") {
+      return data.map((member) => {
+        const { id, email, roles, two_factor, status } = member
+
+        return (
+            <tr key={id}>
+               <td>{email}</td>
+               <td>{roles.join(', ')}</td>
+               <td>{two_factor ? '✓' : ''}</td>
+               <td>{status}</td>
+            </tr>
+         )
+      })
+    }
 
   }
   render() {
     return (
       <div>
-        table goes here
+        <table>
+          {}
+          <thead>
+            { this.renderTableHead() }
+          </thead>
+           <tbody>
+              { this.renderTableBody() }
+           </tbody>
+        </table>
       </div>
     )
   }
