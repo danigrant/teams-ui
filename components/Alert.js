@@ -3,10 +3,13 @@
 const Alert = ({ message, type }) => (
   <div className={type == "success" ? "success alert-container" : "warning alert-container"}>
     <div className="alert-message">{message}</div>
-    <div className="alert-action-buttons">
-      <div className="button cancel-button">Cancel</div>
-      <div className="button proceed-button">Proceed</div>
-    </div>
+    {
+      type === "warning" &&
+      <div className="alert-action-buttons">
+        <div className="button cancel-button">Cancel</div>
+        <div className="button proceed-button">Proceed</div>
+      </div>
+    }
     <style jsx>{`
       .alert-container {
         overflow-wrap: break-word;
@@ -37,7 +40,7 @@ const Alert = ({ message, type }) => (
         line-height: 1.5;
         padding: .375rem .75rem;
         max-width: 70px;
-        margin-left: 15px;
+        margin-left: 8px;
         transition: background-color 0.5s ease;
       }
       .button:hover {

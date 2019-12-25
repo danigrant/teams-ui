@@ -5,7 +5,7 @@ import Alert from './Alert'
 // alertType can be: success, warning
 
 class TableWithSearch extends React.Component {
-  state = { alert: 'some alert goes here', alertType: 'success' }
+  state = { alert: 'big alert you need to pay attention', alertType: 'warning' }
 
   render() {
     const { which, data } = this.props
