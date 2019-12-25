@@ -13,14 +13,14 @@ const Alert = ({ message, type }) => (
         border-radius: 5px;
         width: 100%;
         border: 1px solid;
-        padding: 8px 16px;
+        padding: 8px 8px 8px 16px;
         box-sizing: border-box;
         margin-bottom: 35px;
         display: flex;
         flex-direction: row;
       }
       .alert-message {
-        width: 70%;
+        width: 75%;
         line-height: 2;
       }
       .alert-action-buttons {
@@ -64,11 +64,11 @@ const Alert = ({ message, type }) => (
       }
       .success .proceed-button {
         background-color: rgb(176, 221, 194);
-        border-color: rgb(176, 221, 194);
+        border-color: #90d4ab;
       }
       .success .proceed-button:hover {
         background-color: #fff;
-        color: rgb(176, 221, 194);
+        color: #90d4ab;
       }
       .warning {
         background-color: rgb(252, 240, 242);
@@ -78,7 +78,7 @@ const Alert = ({ message, type }) => (
       .success {
         border-color: rgb(176, 221, 194);
         background-color: rgb(239, 248, 243);
-        color: rgb(28, 66, 43);
+        color: #90d4ab;
       }
     `}</style>
   </div>
