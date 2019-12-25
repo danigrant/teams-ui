@@ -28,7 +28,7 @@ class Table extends React.Component {
         <tr>
           <th>Member</th>
           <th>Roles</th>
-          <th>2FA</th>
+          <th className="center">2FA</th>
           <th>Status</th>
           <th></th>
         </tr>
@@ -47,9 +47,9 @@ class Table extends React.Component {
             <tr key={id}>
                <td>{email}</td>
                <td>{roles.join(', ')}</td>
-               <td className="tfa" >{two_factor ? '✓' : ''}</td>
+               <td className="tfa center" >{two_factor ? '✓' : ''}</td>
                <td>{status}</td>
-               <td>×</td>
+               <td className="delete center">×</td>
             </tr>
          )
       })
@@ -92,9 +92,22 @@ class Table extends React.Component {
           th, td {
             padding: .75rem 0.25rem;
           }
-          td .tfa {
-            text-align: center !important;
+          .tfa {
             color: #8bc34a !important;
+          }
+          .delete {
+            -webkit-transition: -webkit-transform 8s ease;
+            transition: transform 8s ease;
+          }
+          .delete:hover {
+            -webkit-transform: rotate(-200deg);
+            transform: rotate(-200deg);
+          }
+          .delete:active {
+            filter: brightness(95%);
+          }
+          .center {
+            text-align: center !important;
           }
         `}</style>
       </div>
