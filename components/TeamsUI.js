@@ -19,8 +19,8 @@ class TeamsUI extends React.Component {
     if (teamId) {
       team = {
         members: [
-          { id: 1, "email": 'dani@usv.com', "roles": ['Administrator', 'Owner'], "two_factor": true, "status": "active" },
-          { id: 2, "email": 'ddanigrant@gmail.com', "roles": ['Administrator', 'Owner'], "two_factor": true, "status": "pending" }
+          { id: 1, "email": 'kanye@west.com', "roles": ['Administrator', 'Owner'], "two_factor": true, "status": "active" },
+          { id: 2, "email": 'chance@therapper.com', "roles": ['Administrator', 'Owner'], "two_factor": true, "status": "pending" }
         ],
         ip_policies: [
           { "id": 1, "ip_range": '198.49.23.0/24', "description": 'Only allow logins from our VPN', "action": 'allow' },
