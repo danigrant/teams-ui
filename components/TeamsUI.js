@@ -68,7 +68,7 @@ class TeamsUI extends React.Component {
         return (
           <div>
             <Card header="Invite Members" description="Invite someone special to join your team">
-              <InputTextForm placeholder="email@company.org" buttonText="Invite Member" roles={roles} />
+              <InputTextForm placeholder="Email" buttonText="Invite Member" roles={roles} />
             </Card>
             <Card header="Members" description="The who's who of your A-list team">
               <TableWithSearch which="members" data={team.members} />

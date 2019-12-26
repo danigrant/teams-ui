@@ -4,15 +4,15 @@ const InputTextForm = ({ placeholder, buttonText, roles }) => (
   <div>
     <div className="input-group-wrapper">
       <input type="text" placeholder={placeholder} />
-        {/*<div className="input-append">
+        <div className="input-append">
         <span className="input-append-text">@example.com</span>
-      </div>*/}
+      </div>
       { !roles && <div className="button">{buttonText}</div> }
       </div>
       {
         roles &&
         <div>
-          <Select options={roles} isMulti  defaultValue={[roles[0]]} />
+          <Select options={roles} isMulti  placeholder="Select role..." />
           <div id="custom-invite-button-placement" className="button">{buttonText}</div>
         </div>
       }
