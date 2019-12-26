@@ -1,10 +1,18 @@
-const InputTextForm = ({ placeholder, buttonText, withRolePicker }) => (
-  <div className="input-group-wrapper">
-    <input type="text" placeholder={placeholder} />
-    {/*<div className="input-append">
-      <span className="input-append-text">@example.com</span>
-    </div>*/}
-    <div className="button">{buttonText}</div>
+import Select from 'react-select'
+
+const InputTextForm = ({ placeholder, buttonText, roles }) => (
+  <div>
+    <div className="input-group-wrapper">
+      <input type="text" placeholder={placeholder} />
+        {/*<div className="input-append">
+        <span className="input-append-text">@example.com</span>
+      </div>*/}
+      { !roles && <div className="button">{buttonText}</div> }
+      </div>
+      {
+        roles &&
+        <p>choose your role</p>
+      }
     <style jsx>{`
       .input-group-wrapper {
         width: 100%;
@@ -20,6 +28,7 @@ const InputTextForm = ({ placeholder, buttonText, withRolePicker }) => (
         border-radius: .25rem;
         outline: none;
         flex: 1 1 auto;
+        line-height: 1.5;
         width: 1%;
         margin-bottom: 0;
         color: #495057;
