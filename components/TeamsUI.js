@@ -1,4 +1,5 @@
 import Card from './Card'
+import Loading from './Loading'
 import InputTextForm from './InputTextForm'
 import TableWithSearch from './TableWithSearch'
 import { isEmpty } from '../utils/utils'
@@ -37,9 +38,7 @@ class TeamsUI extends React.Component {
 
     if (loading) {
       return (
-        <Card header="Loading Your Team" description="The greatest teams are well worth the wait">
-          <p>Loading...</p>
-        </Card>
+        <Loading />
       )
     } else {
       /* no team? create a team! */
