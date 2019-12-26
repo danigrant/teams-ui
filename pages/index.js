@@ -4,7 +4,7 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <TeamsUI teamId="" />
+        <TeamsUI teamId="0" />
         <style jsx>{`
 
         `}</style>

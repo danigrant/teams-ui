@@ -1,10 +1,10 @@
-const InputTextForm = ({ placeholder }) => (
+const InputTextForm = ({ placeholder, buttonText }) => (
   <div className="input-group-wrapper">
     <input type="text" placeholder={placeholder} />
-    <div className="input-append">
+    {/*<div className="input-append">
       <span className="input-append-text">@example.com</span>
-    </div>
-    <div className="button">Submit</div>
+    </div>*/}
+    <div className="button">{buttonText}</div>
     <style jsx>{`
       .input-group-wrapper {
         width: 100%;
