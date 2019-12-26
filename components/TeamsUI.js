@@ -24,7 +24,7 @@ class TeamsUI extends React.Component {
         ],
         ip_policies: [
           { "id": 1, "ip_range": '198.49.23.0/24', "description": 'Only allow logins from our VPN', "action": 'allow' },
-          { "id": 2, "ip_range": '198.21.23.0/8', "description": 'Do not allow logins from Russia', "action": 'block' }
+          { "id": 2, "ip_range": '37.9.240.0/21', "description": 'Do not allow logins from Russia', "action": 'block' }
         ]
       }
     }
