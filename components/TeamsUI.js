@@ -46,7 +46,7 @@ class TeamsUI extends React.Component {
         return (
           <div>
             <Card header="Create A Team" description="Teamwork makes the dream work">
-              <InputTextForm placeholder="Your Team Name" buttonText="Create A Team" />
+              <InputTextForm placeholder="Your Team Name" buttonText="Create A Team" withRolePicker={false} />
             </Card>
           </div>
         )
@@ -57,7 +57,7 @@ class TeamsUI extends React.Component {
         return (
           <div>
             <Card header="Invite Members" description="Invite someone special to join your team">
-              <InputTextForm placeholder="email" buttonText="Submit" />
+              <InputTextForm placeholder="email" buttonText="Submit" withRolePicker={true} />
             </Card>
             <Card header="Members" description="The who's who of your A-list team">
               <TableWithSearch which="members" data={team.members} />

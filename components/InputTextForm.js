@@ -1,4 +1,4 @@
-const InputTextForm = ({ placeholder, buttonText }) => (
+const InputTextForm = ({ placeholder, buttonText, withRolePicker }) => (
   <div className="input-group-wrapper">
     <input type="text" placeholder={placeholder} />
     {/*<div className="input-append">
