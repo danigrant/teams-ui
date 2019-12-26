@@ -11,13 +11,17 @@ const InputTextForm = ({ placeholder, buttonText, roles }) => (
       </div>
       {
         roles &&
-        <p>choose your role</p>
+        <div>
+          <Select options={roles} isMulti  defaultValue={[roles[0]]} />
+          <div id="custom-invite-button-placement" className="button">{buttonText}</div>
+        </div>
       }
     <style jsx>{`
       .input-group-wrapper {
         width: 100%;
         display: flex;
         align-items: stretch;
+        margin-bottom: 18px;
       }
       input {
         border-radius: 0.25rem;
@@ -30,6 +34,8 @@ const InputTextForm = ({ placeholder, buttonText, roles }) => (
         flex: 1 1 auto;
         line-height: 1.5;
         width: 1%;
+        box-sizing: border-box;
+        height: 40px;
         margin-bottom: 0;
         color: #495057;
       }
@@ -52,7 +58,7 @@ const InputTextForm = ({ placeholder, buttonText, roles }) => (
         border-radius: 5px;
         line-height: 1.5;
         padding: .375rem .75rem;
-        min-width: 90px;
+        width: 115px;
         margin-left: 15px;
         transition: background-color 0.5s ease;
       }
@@ -63,6 +69,10 @@ const InputTextForm = ({ placeholder, buttonText, roles }) => (
       }
       .button:active {
         filter: brightness(98%);
+      }
+      #custom-invite-button-placement {
+        margin-top: 18px;
+        margin-left: 0;
       }
     `}</style>
   </div>

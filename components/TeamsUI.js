@@ -30,7 +30,17 @@ class TeamsUI extends React.Component {
     }
 
     // will also need to fetch roles for this namespace, for now just writing them in
-    this.setState({ team: team, loading: false, roles: ['Super Administrator', 'Billing & Finance', 'Customer Support', 'Nosy Product Manager', 'TechOps/Engineering'] })
+    this.setState({
+      team: team,
+      loading: false,
+      roles: [
+        { value: '0000', label: 'Super Administrator' },
+        { value: '0001', label: 'Billing & Finance' },
+        { value: '0002', label: 'Customer Support' },
+        { value: '0003', label: 'Nosy Product Manager' },
+        { value: '0003', label: 'TechOps/Engineering' }
+      ]
+    })
 
   }
 
@@ -58,7 +68,7 @@ class TeamsUI extends React.Component {
         return (
           <div>
             <Card header="Invite Members" description="Invite someone special to join your team">
-              <InputTextForm placeholder="email" buttonText="Submit" roles={roles} />
+              <InputTextForm placeholder="email@company.org" buttonText="Invite Member" roles={roles} />
             </Card>
             <Card header="Members" description="The who's who of your A-list team">
               <TableWithSearch which="members" data={team.members} />
